@@ -1,0 +1,82 @@
+{
+	"projectname": "blog",
+	"setting": {
+		"compileHotReLoad": true
+	},
+	"condition": {
+		"miniprogram": {
+			"list": [
+				{
+					"name": "pages/quanzi_article/list",
+					"pathName": "pages/quanzi_article/list",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				},
+				{
+					"name": "uni_modules/uni-id-pages/pages/userinfo/userinfo",
+					"pathName": "uni_modules/uni-id-pages/pages/userinfo/userinfo",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				},
+				{
+					"name": "pages/self/self",
+					"pathName": "pages/self/self",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				},
+				{
+					"name": "uni_modules/uni-id-pages/pages/login/login-withpwd",
+					"pathName": "uni_modules/uni-id-pages/pages/login/login-withpwd",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				},
+				{
+					"name": "uni_modules/uni-id-pages/pages/login/login-withpwd",
+					"pathName": "uni_modules/uni-id-pages/pages/login/login-withpwd",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				},
+				{
+					"name": "pages/edit/edit",
+					"pathName": "pages/edit/edit",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				},
+				{
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				},
+				{
+					"name": "pages/demo1/demo1",
+					"pathName": "pages/demo1/demo1",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				},
+				{
+					"name": "uni_modules/uni-id-pages/pages/register/register",
+					"pathName": "uni_modules/uni-id-pages/pages/register/register",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				},
+				{
+					"name": "pages/demo/demo",
+					"pathName": "pages/demo/demo",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "wd-skeleton": "../../uni_modules/wot-design-uni/components/wd-skeleton/wd-skeleton",
+    "blog-item": "../../components/blog-item/blog-item",
+    "wd-tab": "../../uni_modules/wot-design-uni/components/wd-tab/wd-tab",
+    "wd-tabs": "../../uni_modules/wot-design-uni/components/wd-tabs/wd-tabs",
+    "wd-button": "../../uni_modules/wot-design-uni/components/wd-button/wd-button",
+    "wd-fab": "../../uni_modules/wot-design-uni/components/wd-fab/wd-fab"
+  }
+}

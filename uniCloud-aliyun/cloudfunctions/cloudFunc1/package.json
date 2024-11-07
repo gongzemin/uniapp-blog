@@ -1,0 +1,7 @@
+{
+  "name": "cloudFunc1",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

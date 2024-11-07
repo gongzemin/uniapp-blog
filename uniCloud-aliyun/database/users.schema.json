@@ -1,0 +1,58 @@
+{
+  "bsonType": "object",
+  "required": ["name", "email", "age"], // 必填字段
+  "permission": {
+    "read": true,   // 允许读取
+    "create": true, // 允许创建
+    "update": true, // 允许更新
+    "delete": true  // 允许删除
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "name": {
+      "bsonType": "string",
+      "description": "用户的名字",
+      "minLength": 1,  // 最小长度为1
+      "maxLength": 50  // 最大长度为50
+    },
+    "email": {
+      "bsonType": "string",
+      "description": "用户的电子邮件",
+      "pattern": "^\\S+@\\S+\\.\\S+$", // 使用正则表达式确保是有效的电子邮件格式
+      "minLength": 5
+    },
+    "age": {
+      "bsonType": "int",
+      "description": "用户的年龄",
+      "minimum": 0,    // 最小值
+      "maximum": 120   // 最大值
+    },
+    "created_at": {
+      "bsonType": "date",
+      "description": "创建时间，系统自动生成"
+    },
+    "updated_at": {
+      "bsonType": "date",
+      "description": "更新时间，系统自动生成"
+    },
+    "address": {
+      "bsonType": "string",
+      "description": "用户的地址",
+      "maxLength": 200
+    },
+    "phone_number": {
+      "bsonType": "string",
+      "description": "用户的电话号码",
+      "pattern": "^[0-9]{10,15}$", // 限制为10到15位数字的电话号码
+      "maxLength": 15
+    },
+    "role": {
+      "bsonType": "string",
+      "description": "用户角色，如 admin, user, etc.",
+      "enum": ["admin", "user"], // 限定为特定的角色
+      "default": "user"
+    }
+  }
+}

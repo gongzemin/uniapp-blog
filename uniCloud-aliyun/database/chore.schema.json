@@ -1,0 +1,24 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+  "bsonType": "object",
+  "required": ["time", "description"],
+  "permission": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "time": {
+      "bsonType": "string",
+      "title": "干活的时间"
+    },
+    "description": {
+      "bsonType": "string",
+      "title": "干了啥"
+    }
+  }
+}

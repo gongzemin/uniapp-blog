@@ -1,0 +1,100 @@
+{
+  "id": "4726067",
+  "name": "圈子",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "34452829",
+      "name": "editor-bold",
+      "font_class": "editor-bold",
+      "unicode": "e829",
+      "unicode_decimal": 59433
+    },
+    {
+      "icon_id": "34452833",
+      "name": "editor-italic",
+      "font_class": "editor-italic",
+      "unicode": "e82b",
+      "unicode_decimal": 59435
+    },
+    {
+      "icon_id": "29924",
+      "name": "check",
+      "font_class": "check",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "4936615",
+      "name": "file-image-fill",
+      "font_class": "file-image-fill",
+      "unicode": "e85a",
+      "unicode_decimal": 59482
+    },
+    {
+      "icon_id": "10793055",
+      "name": "image",
+      "font_class": "image",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "34452843",
+      "name": "editor-text",
+      "font_class": "editor-text",
+      "unicode": "e82a",
+      "unicode_decimal": 59434
+    },
+    {
+      "icon_id": "35335942",
+      "name": "h",
+      "font_class": "h",
+      "unicode": "e8ac",
+      "unicode_decimal": 59564
+    },
+    {
+      "icon_id": "35853627",
+      "name": "h",
+      "font_class": "h1",
+      "unicode": "e675",
+      "unicode_decimal": 58997
+    },
+    {
+      "icon_id": "39180745",
+      "name": "editor-divider",
+      "font_class": "editor-divider",
+      "unicode": "e7c1",
+      "unicode_decimal": 59329
+    },
+    {
+      "icon_id": "15838432",
+      "name": "browse",
+      "font_class": "browse",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "15838474",
+      "name": "favorite",
+      "font_class": "favorite",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "15838479",
+      "name": "fabulous",
+      "font_class": "fabulous",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "15838483",
+      "name": "good",
+      "font_class": "good",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    }
+  ]
+}

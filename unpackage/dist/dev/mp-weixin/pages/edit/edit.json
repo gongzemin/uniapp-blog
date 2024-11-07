@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "新建笔记",
+  "usingComponents": {
+    "wd-button": "../../uni_modules/wot-design-uni/components/wd-button/wd-button",
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons"
+  }
+}

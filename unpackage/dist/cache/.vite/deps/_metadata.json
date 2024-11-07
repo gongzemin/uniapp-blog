@@ -1,0 +1,15 @@
+{
+  "hash": "a84f7194",
+  "configHash": "0856e90a",
+  "lockfileHash": "f5bbf730",
+  "browserHash": "f0b26798",
+  "optimized": {
+    "vconsole": {
+      "src": "../../../../../node_modules/vconsole/dist/vconsole.min.js",
+      "file": "vconsole.js",
+      "fileHash": "a0caf161",
+      "needsInterop": true
+    }
+  },
+  "chunks": {}
+}

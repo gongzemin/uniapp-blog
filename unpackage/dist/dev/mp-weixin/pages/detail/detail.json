@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "详情页",
+  "usingComponents": {
+    "wd-skeleton": "../../uni_modules/wot-design-uni/components/wd-skeleton/wd-skeleton",
+    "uni-dateformat": "../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat",
+    "wd-icon": "../../uni_modules/wot-design-uni/components/wd-icon/wd-icon"
+  }
+}

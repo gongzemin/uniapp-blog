@@ -16,22 +16,39 @@ const _sfc_main = {
   __name: "self",
   setup(__props) {
     const groupList1 = [
-      { name: "我的长文" },
-      { name: "我的点赞" },
+      { name: "我的长文", id: "myArticle" },
+      { name: "我的点赞", id: "myLike" },
       { name: "评论过的" }
     ];
     const groupList2 = [{ name: "关于" }, { name: "意见反馈" }];
     const userInfo = common_vendor.computed(() => uni_modules_uniIdPages_common_store.store.userInfo);
     const hasLogin = common_vendor.computed(() => uni_modules_uniIdPages_common_store.store.hasLogin);
-    const logout = () => {
-      console.log("logout");
+    const clickItem = (item) => {
+      if ((item == null ? void 0 : item.id) == "myArticle") {
+        common_vendor.index.navigateTo({
+          url: "/pages/quanzi_article/list"
+        });
+      } else if (item.id == "myLike") {
+        common_vendor.index.navigateTo({
+          url: "/pages/quanzi_like/list"
+        });
+      }
+      console.log(item, "item");
+    };
+    const goLoginPage = () => {
       if (!hasLogin.value) {
         common_vendor.index.showToast({
           title: "未登录",
           icon: "none"
         });
-        return;
+        return true;
       }
+      return false;
+    };
+    const logout = () => {
+      console.log("logout");
+      if (goLoginPage())
+        return;
       common_vendor.index.showModal({
         title: "是否确认退出",
         success: (res) => {
@@ -78,7 +95,8 @@ const _sfc_main = {
           return {
             a: common_vendor.t(item.name),
             b: "5be11bd1-2-" + i0,
-            c: idx
+            c: idx,
+            d: common_vendor.o(($event) => clickItem(item), idx)
           };
         }),
         m: common_vendor.p({
@@ -89,7 +107,8 @@ const _sfc_main = {
           return {
             a: common_vendor.t(item.name),
             b: "5be11bd1-3-" + i0,
-            c: idx
+            c: idx,
+            d: common_vendor.o(($event) => clickItem(item), idx)
           };
         }),
         o: common_vendor.p({

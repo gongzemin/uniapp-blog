@@ -28,7 +28,7 @@ const _sfc_main = {
   methods: {
     handleItemClick(id) {
       common_vendor.index.navigateTo({
-        url: "./detail?id=" + id
+        url: "/pages/detail/detail?id=" + id
       });
     },
     fabClick() {

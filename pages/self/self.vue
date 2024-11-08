@@ -73,7 +73,11 @@
       </view>
       <view class="list">
         <view class="group">
-          <view class="item" v-for="(item, idx) in groupList1" :key="idx">
+          <view
+            class="item"
+            v-for="(item, idx) in groupList1"
+            :key="idx"
+            @click="clickItem(item)">
             <view class="left">
               <text>{{ item.name }}</text>
             </view>
@@ -83,7 +87,11 @@
           </view>
         </view>
         <view class="group">
-          <view class="item" v-for="(item, idx) in groupList2" :key="idx">
+          <view
+            class="item"
+            v-for="(item, idx) in groupList2"
+            :key="idx"
+            @click="clickItem(item)">
             <view class="left">
               <text>{{ item.name }}</text>
             </view>
@@ -112,8 +120,8 @@ import { computed } from "vue";
 import { store, mutations } from "@/uni_modules/uni-id-pages/common/store.js";
 import { nickName, getAvatar } from "../../utils/tool";
 const groupList1 = [
-  { name: "我的长文" },
-  { name: "我的点赞" },
+  { name: "我的长文", id: "myArticle" },
+  { name: "我的点赞", id: "myLike" },
   { name: "评论过的" },
 ];
 
@@ -122,16 +130,33 @@ const groupList2 = [{ name: "关于" }, { name: "意见反馈" }];
 const userInfo = computed(() => store.userInfo);
 const hasLogin = computed(() => store.hasLogin);
 
-const logout = () => {
-  console.log("logout");
+const clickItem = (item) => {
+  if (item?.id == "myArticle") {
+    uni.navigateTo({
+      url: "/pages/quanzi_article/list",
+    });
+  } else if (item.id == "myLike") {
+    uni.navigateTo({
+      url: "/pages/quanzi_like/list",
+    });
+  }
+  console.log(item, "item");
+};
+
+const goLoginPage = () => {
   if (!hasLogin.value) {
     uni.showToast({
       title: "未登录",
       icon: "none",
     });
-    return;
+    return true;
   }
+  return false;
+};
 
+const logout = () => {
+  console.log("logout");
+  if (goLoginPage()) return;
   uni.showModal({
     title: "是否确认退出",
     success: (res) => {

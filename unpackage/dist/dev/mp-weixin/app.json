@@ -22,7 +22,8 @@
     "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
     "pages/self/self",
     "pages/detail/detail",
-    "pages/quanzi_article/list"
+    "pages/quanzi_article/list",
+    "pages/quanzi_like/list"
   ],
   "window": {
     "navigationBarTextStyle": "white",

@@ -8117,6 +8117,12 @@ const pages = [
     style: {
       navigationBarTitleText: "列表"
     }
+  },
+  {
+    path: "pages/quanzi_like/list",
+    style: {
+      navigationBarTitleText: "我的点赞"
+    }
   }
 ];
 const globalStyle = {
@@ -8446,7 +8452,7 @@ class v {
 function I(e2) {
   return e2 && "string" == typeof e2 ? JSON.parse(e2) : e2;
 }
-const S = true, b = "mp-weixin", A = I(define_process_env_UNI_SECURE_NETWORK_CONFIG_default), C = b, P = I('{\n    "address": [\n        "127.0.0.1",\n        "172.20.10.3"\n    ],\n    "debugPort": 9001,\n    "initialLaunchType": "remote",\n    "servePort": 7002,\n    "skipFiles": [\n        "<node_internals>/**",\n        "/Applications/HBuilderX.app/Contents/HBuilderX/plugins/unicloud/**/*.js"\n    ]\n}\n'), T = I('[{"provider":"aliyun","spaceName":"juzi","spaceId":"mp-0f5589ad-8ec0-443d-bfcc-a8f38857fc78","clientSecret":"lGdTO0xWEkoRLJDmKwfkqA==","endpoint":"https://api.next.bspapp.com"}]') || [];
+const S = true, b = "mp-weixin", A = I(define_process_env_UNI_SECURE_NETWORK_CONFIG_default), C = b, P = I('{\n    "address": [\n        "127.0.0.1",\n        "192.168.0.100"\n    ],\n    "debugPort": 9001,\n    "initialLaunchType": "local",\n    "servePort": 7002,\n    "skipFiles": [\n        "<node_internals>/**",\n        "/Applications/HBuilderX.app/Contents/HBuilderX/plugins/unicloud/**/*.js"\n    ]\n}\n'), T = I('[{"provider":"aliyun","spaceName":"juzi","spaceId":"mp-0f5589ad-8ec0-443d-bfcc-a8f38857fc78","clientSecret":"lGdTO0xWEkoRLJDmKwfkqA==","endpoint":"https://api.next.bspapp.com"}]') || [];
 let O = "";
 try {
   O = "__UNI__EF97A3B";

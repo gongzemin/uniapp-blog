@@ -87,8 +87,8 @@ const _sfc_main = {
         getOne: true
       }).then((res) => {
         loadingState.value = false;
-        console.log(res.result.data, "res");
-        if (res.errCode === 0) {
+        console.log(res.result.data, res, "res");
+        if (res.result.errCode === 0) {
           if (res.result.data) {
             let isLike = false;
             if (uni_modules_uniIdPages_common_store.store.hasLogin)

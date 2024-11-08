@@ -2,11 +2,9 @@
   <view class="container">
     <unicloud-db
       ref="udb"
-      :where="`user_id==$cloudEnv_uid`"
-      orderby="publish_date desc"
       v-slot:default="{ data, pagination, loading, hasMore, error }"
       :collection="collectionList"
-      field="user_id,title,description,province,content,article_status,last_comment_user_id,picurls,publish_date,last_modify_date">
+      field="article_id,publish_date,user_id">
       <view v-if="error">{{ error.message }}</view>
       <view v-else-if="data">
         <uni-list>
@@ -20,7 +18,7 @@
               <text>
                 <!-- 此处默认显示为_id，请根据需要自行修改为其他字段 -->
                 <!-- 如果使用了联表查询，请参考生成的 admin 项目中 list.vue 页面 -->
-                {{ item.title }}
+                {{ item.article_id[0].title }}
               </text>
             </template>
           </uni-list-item>
@@ -31,6 +29,12 @@
           loading ? 'loading' : hasMore ? 'more' : 'noMore'
         "></uni-load-more>
     </unicloud-db>
+    <uni-fab
+      ref="fab"
+      horizontal="right"
+      vertical="bottom"
+      :pop-menu="false"
+      @fabClick="fabClick" />
   </view>
 </template>
 
@@ -39,7 +43,10 @@ const db = uniCloud.database();
 export default {
   data() {
     return {
-      collectionList: "quanzi_article",
+      collectionList: [
+        db.collection("quanzi_like").where(`user_id==$cloudEnv_uid`).getTemp(),
+        db.collection("quanzi_article").field("_id,title").getTemp(),
+      ],
       loadMore: {
         contentdown: "",
         contentrefresh: "",
@@ -63,7 +70,7 @@ export default {
   methods: {
     handleItemClick(id) {
       uni.navigateTo({
-        url: "/pages/detail/detail?id=" + id,
+        url: "./detail?id=" + id,
       });
     },
     fabClick() {

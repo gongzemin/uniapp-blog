@@ -25,6 +25,7 @@ if (!Math) {
   "./pages/self/self.js";
   "./pages/detail/detail.js";
   "./pages/quanzi_article/list.js";
+  "./pages/quanzi_like/list.js";
 }
 const _sfc_main = {
   onLaunch: function() {
